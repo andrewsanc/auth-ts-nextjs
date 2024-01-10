@@ -47,6 +47,7 @@ export default function RegisterForm() {
 
   return (
     <CardWrapper
+      headerTitle='🔐 AuthMe'
       headerLabel='Create an account'
       backButtonLabel='Already have an account?'
       backButtonHref='/auth/login'

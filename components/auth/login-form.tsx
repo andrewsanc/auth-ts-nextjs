@@ -45,6 +45,7 @@ export default function LoginForm() {
 
   return (
     <CardWrapper
+      headerTitle='🔐 AuthMe'
       headerLabel='Welcome back'
       backButtonLabel="Don't have an account?"
       backButtonHref='/auth/register'
