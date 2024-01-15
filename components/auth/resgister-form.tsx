@@ -19,7 +19,7 @@ import CardWrapper from "@/components/auth/card-wrapper";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import FormError from "@/components/formStatuses/form-error";
-import FormSuccess from "../formStatuses/form-success";
+import FormSuccess from "@/components/formStatuses/form-success";
 import { register } from "@/actions/register";
 
 export default function RegisterForm() {
@@ -32,8 +32,7 @@ export default function RegisterForm() {
     defaultValues: {
       email: "",
       password: "",
-      firstName: "",
-      lastName: "",
+      name: "",
     },
   });
 
@@ -58,33 +57,15 @@ export default function RegisterForm() {
           <div className='space-y-6'>
             <FormField
               control={form.control}
-              name='firstName'
+              name='name'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>First name</FormLabel>
+                  <FormLabel>Name</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder='John'
-                      type='text'
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='lastName'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Last name</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      disabled={isPending}
-                      placeholder='Doe'
+                      placeholder='John Doe'
                       type='text'
                     />
                   </FormControl>
